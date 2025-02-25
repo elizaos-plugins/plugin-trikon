@@ -35,5 +35,22 @@
         "format": "biome format src/",
         "format:fix": "biome format --write src/",
         "test": "vitest run"
+    },
+    "agentConfig": {
+        "pluginType": "elizaos:client:1.0.0",
+        "pluginParameters": {
+            "TRIKON_WALLET_ADDRESS": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Your Trikon wallet address (must be a valid 64-character hex string starting with '0x')",
+                "optional": false
+            },
+            "TRIKON_INITIAL_BALANCE": {
+                "type": "string",
+                "minLength": 1,
+                "description": "(Optional) The initial balance for the wallet. Defaults to \"0\" if not provided.",
+                "optional": true
+            }
+        }
     }
 }
